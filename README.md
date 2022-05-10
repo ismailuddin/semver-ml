@@ -13,12 +13,12 @@ It is proposed that the existing format of **vMAJOR.MINOR.PATCH** be utilised, w
 1. The **MAJOR** version shall denote any of the following changes:
     * A change in the model architecture, including within the hidden layers, even if the input and output data shape / format are unchanged
     * A change in the format of the data e.g. 32-bit float to 8-bit float precision
-    * A change in the input or output data shape e.g. [3, 128, 128] to [4. 128, 128]
+    * A change in the input or output data shape e.g. [3, 128, 128] to [4, 128, 128]
 2. The **MINOR** version
 3. The **PATCH** version shall denote changes to trainining data used to train the model, whilst keeping all other aspects of the model constant.
 
 ### Compatibility
-- As a **MAJOR** version increment can correspond to a change in model architecture, different major versions are not by default interoperable or compatible with one and another. Althought a **MAJOR** increment could also be simply due to updating the model architecture but keeping the same input and output data shape & format, as well being trained on the same data, the mere fact of a change in the model architecture could have more significant effects on the model performance which could make it in compatible with where it is being deployed, without a conscious decision for an update to this version.
+- As a **MAJOR** version increment can correspond to a change in model architecture, different major versions are not by default interoperable or compatible with one and another. Although a **MAJOR** increment could be simply due to updating the model architecture whilst keeping the same input and output data shape & format, as well being trained on the same data, the mere fact of a change in the model architecture could have more significant effects on the model performance which could make it in compatible with where it is being deployed. Thus unless a conscious decision has been made to update to this new version, it would be unsafe to automatically pull in the latest major version increment of the model in an automated deployment.
 
 
 ## References
